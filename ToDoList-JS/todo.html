@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
+  </head>
+  <body class="bg-red-300 flex justify-center items-center min-h-screen">
+    <div class="bg-slate-400 rounded-lg w-200 p-6">
+      <form class="flex justify-center items-center mb-4 flex-col">
+        <h1 class="font-medium text-4xl m-4">Ma todolist</h1>
+        <div>
+          <input type="text" id="taskInput" class="px-2 py-1 rounded-md border-gray-400 border mr-2">
+          <button type="submit" id="addTaskButton" class="bg-green-500 text-white px-2 py-1 rounded-md hover:bg-green-600">Ajouter une tâche</button>
+          <button type="button" id="clearTaskButton" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 ml-2">Tout supprimer</button>
+        </div>
+      </form>
+      <ul id="taskList">
+        <div id="notification"></div>
+        <!--task-->
+      </ul>
+    </div>
+    <script src="js/todolist.js"></script>
+  </body>
+</html>
