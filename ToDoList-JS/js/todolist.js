@@ -135,12 +135,6 @@ document
     clearLocalStorage();
   });
 
-document
-  .getElementById("clearTaskButton")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    clearAll();
-  });
 // Écouteur d'événement pour le formulaire
 document
   .getElementById("addTaskButton")
@@ -150,6 +144,8 @@ document
     // Récupère le texte saisi par l'utilisateur
     const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
+    // Efface le champ de texte
+    taskInput.value = "";
 
     // Ajoute la nouvelle tâche à la liste
     if (txtVerif(taskText)) {
@@ -175,6 +171,5 @@ document
         "mx-auto"
       );
     }
-    // Efface le champ de texte
-    taskInput.value = "";
   });
+
